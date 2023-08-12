@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  background: black;
+}
+
+.calculator{
+  width: 100%;
+  min-height: 90vh;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  gap: 8px;
+  border-radius: 20px;
+}
+
+.calculator .output{
+  background-color: lightblue;
+  grid-column: 1 / 5;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.calculator button {
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  box-shadow: 0px 0px 8px lightblue;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calculator button:hover {
+  background: rgb(216, 211, 211);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.span-four {
+  grid-column: span 4;
+}
+
+.calculator button:last-child{
+  background: lightblue;
+}
+
+.calculator #sm-button {
+  background: rgb(245, 240, 240);
+  color: black;
+}
+
+.calculator #sm-button:hover {
+  background: rgb(216, 211, 211);
+}
+
+.calculator #equal-button {
+  background: lightblue;
+  color: black;
+}
+
+.calculator button:not(.number):not(#clear-button):not(#delete-button):not(#equal-button):not(#decimal-button):not(#sm-button) {
+  color:violet;
+}
+
