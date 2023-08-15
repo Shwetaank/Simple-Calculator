@@ -35,17 +35,35 @@ document.getElementById("delete-button").addEventListener("click", () => {
 document.getElementById("equal-button").addEventListener("click", () => {
   const expression = resultDisplay.textContent;
 
-  // Check if the expression is valid
-  if (/^[0-9+\-*/.]+$/.test(expression)) {
-    // Evaluate the expression
-    const result = eval(expression);
-    
-    // Display the resulut
-    resultDisplay.textContent = result;
+  // Function to validate a mathematical expression
+function isValidExpression(expression) {
+  try {
+    // Attempt to parse the expression
+    eval(expression);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+// ...
+
+// Equal button functionality
+document.getElementById("equal-button").addEventListener("click", () => {
+  const expression = resultDisplay.textContent;
+
+  if (isValidExpression(expression)) {
+    try {
+      const result = eval(expression);
+      resultDisplay.textContent = isNaN(result) ? "Error" : result;
+    } catch (error) {
+      resultDisplay.textContent = "Error";
+    }
   } else {
-    // Display an error message
     resultDisplay.textContent = "Error";
   }
+});
+
 });
 
 // Get the "SM" button element
