@@ -17,7 +17,6 @@ numberButtons.forEach((button) => {
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    button.addEventListener("click", () => {
      /* 
     Changes made:
     made a regex to check if last character of resultDisplay.textContent mathces with operator buttons.
@@ -33,7 +32,6 @@ operatorButtons.forEach((button) => {
         resultDisplay.textContent += button.textContent;
     }
       
-  });
   });
 });
 
