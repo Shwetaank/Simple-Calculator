@@ -17,7 +17,21 @@ numberButtons.forEach((button) => {
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", () => {
+     /* 
+    Changes made:
+    made a regex to check if last character of resultDisplay.textContent mathces with operator buttons.
+    if it does then remove last character of resultDisplay.textContent and add newly pressed operator button.
+    else it works normally by addin whatever is clicked.
+    */
+    const regex = /[\/\+\*\-]/;
+    const str=resultDisplay.textContent.charAt(resultDisplay.textContent.length-1);
+    if (regex.test(str)) {
+    resultDisplay.textContent=resultDisplay.textContent.substring(0, resultDisplay.textContent.length-1);
     resultDisplay.textContent += button.textContent;
+    }else{
+        resultDisplay.textContent += button.textContent;
+    }
+      
   });
 });
 
