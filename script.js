@@ -86,6 +86,6 @@ const smButton = document.getElementById("sm-button");
 // Add event listener to the "SM" button
 smButton.addEventListener("click", () => {
   // Update the result display with the custom message
-  resultDisplay.textContent = "From Shwetank (Version-1.0)";
+  resultDisplay.textContent = "From Shwetank (Version-2.0)";
 });
 

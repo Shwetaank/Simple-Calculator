@@ -17,3 +17,5 @@ A basic web-based calculator application built using HTML, CSS, and JavaScript.
 # Contact
 If you have any questions or suggestions, feel free to contact me at spmorey87@gmail.com
 
+# Bug Fix 
+made a regex to check if last character of resultDisplay.textContent mathces with operator buttons.
